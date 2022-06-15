@@ -20,6 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartCloset"
         android:usesCleartextTraffic="true">
+        <!-- mypage graph -->
+        android:name="androidx.multidex.MultiDexApplication"
         <activity android:name=".login.FirstLogin" />
         <activity
             android:name=".MainActivity"
@@ -36,6 +38,9 @@
         <activity android:name=".myPage.MyPage" />
 <!--        mqtt 서비스 -->
         <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <activity android:name=".myPage.MyPage_Edit"/>
+        <activity android:name=".check.Check" />
+        <activity android:name=".add.AddClothes" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
