@@ -31,9 +31,12 @@ import retrofit2.Response
 import java.util.*
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.example.smartcloset.network.MyMqtt
+import org.eclipse.paho.client.mqttv3.MqttMessage
 
 
 class HomeFragment : Fragment() {
+
 
     val PERMISSION_LOCATION = 10
     lateinit var mainActivity: MainActivity
@@ -59,7 +62,6 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.home, container, false)
         requirePermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), PERMISSION_LOCATION)
         requirePermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), PERMISSION_LOCATION)
-
 
         return view
     }
@@ -90,6 +92,7 @@ class HomeFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
 
 
 
@@ -286,6 +289,8 @@ class HomeFragment : Fragment() {
         //Context를 받아와 MainActivity로 캐스팅해주면 메소드들을 사용할 수 있다.
         //여기에서는 Adapter를 생성할 때 context를 넘겨주기 위해 이 방법을 사용했다.
         mainActivity = context as MainActivity
+
+
 
     }
 

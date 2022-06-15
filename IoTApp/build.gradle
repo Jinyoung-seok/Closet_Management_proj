@@ -4,6 +4,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+
+        mavenCentral()
         // mypage
         mavenCentral()
         maven { url 'https://jitpack.io' }
@@ -21,6 +23,10 @@ buildscript {
 
 allprojects {
     repositories {
+        google()
+        jcenter()
+
+        mavenCentral()
         // google()
         // jcenter() mypage delete
     }

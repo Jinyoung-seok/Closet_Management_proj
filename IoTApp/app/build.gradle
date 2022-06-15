@@ -63,6 +63,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.8.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.0'
 
+    //AWS
+    implementation 'com.amplifyframework:core:1.4.0'
+    implementation 'com.amplifyframework:aws-auth-cognito:1.4.0'
+    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.8.+@aar') { transitive = true }
+    implementation('com.amazonaws:aws-android-sdk-auth-userpools:2.8.+@aar') { transitive = true }
+
     // Mypage - Graph
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
     implementation("androidx.multidex:multidex:2.0.1")

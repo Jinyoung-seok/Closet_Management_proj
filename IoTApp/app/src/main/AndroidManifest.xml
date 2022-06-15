@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 날씨 API 가져오기 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -34,6 +36,8 @@
         <activity android:name=".login.FindPw" />
         <activity android:name=".login.Register" />
         <activity android:name=".myPage.MyPage" />
+<!--        mqtt 서비스 -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
         <activity android:name=".myPage.MyPage_Edit"/>
         <activity android:name=".check.Check" />
         <activity android:name=".add.AddClothes" />
